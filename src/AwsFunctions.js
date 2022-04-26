@@ -1,14 +1,9 @@
 import * as AWS from 'aws-sdk'
 
-console.log(
-  'process.env.REACT_APP_AWS_REGION :>> ',
-  process.env.REACT_APP_AWS_REGION
-)
-
 const configuration = {
   accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY,
   secretAccessKey: process.env.REACT_APP_AWS_SECRET,
-  region: 'us-west-1',
+  region: process.env.REACT_APP_AWS_REGION,
 }
 AWS.config.update(configuration)
 
